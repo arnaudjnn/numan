@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import path from "path";
 import { promises as fs } from "fs";
 import OpenAI from "openai";
 
@@ -11,7 +12,8 @@ const openai = new OpenAI({
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const position = searchParams.get("position")?.toLowerCase();
-  const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
+  const jsonDirectory = path.join(process.cwd(), "json");
+  const file = await fs.readFile(jsonDirectory + "/public/data.json", "utf8");
   const data: DataProps[] = JSON.parse(file);
 
   const strFunctions = data.map((d) => d.function);
