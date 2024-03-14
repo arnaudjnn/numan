@@ -8,8 +8,6 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export const maxDuration = 300;
-
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const position = searchParams.get("position")?.toLowerCase();
