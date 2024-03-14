@@ -11,7 +11,7 @@ const openai = new OpenAI({
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const position = searchParams.get("position")?.toLowerCase();
-  const file = await fs.readFile(process.cwd() + "/public/data.json", "utf8");
+  const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
   const data: DataProps[] = JSON.parse(file);
 
   const strFunctions = data.map((d) => d.function);
