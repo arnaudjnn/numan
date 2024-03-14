@@ -18,11 +18,7 @@ export async function getLinkedinData(url: string) {
 
 export async function getProfileData(position: string) {
   const res = await fetch(
-    `${
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:3000"
-        : `https://${process.env.VERCEL_URL}`
-    }/api/enrich-profile?position=${position}`
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/enrich-profile?position=${position}`
   );
   const data = await res.json();
   return data;

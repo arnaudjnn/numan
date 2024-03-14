@@ -9,9 +9,15 @@ export default {
       bg: "rgb(255 207 0)",
       _hover: {
         bg: "rgb(255 207 0)",
+        _disabled: {
+          bg: "rgb(255 207 0)",
+        },
       },
       _active: {
         bg: "rgb(255 207 100)",
+      },
+      _disabled: {
+        bg: "rgb(255 207 0)",
       },
     },
   },
