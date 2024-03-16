@@ -1,7 +1,6 @@
 import Container from "./components/container";
 import Button from "./components/button";
-import Tabs from "./components/tabs";
-import Input from "./components/input";
+import Radio from "./components/radio";
 
 export const theme = {
   config: {
@@ -24,7 +23,13 @@ export const theme = {
   components: {
     Container,
     Button,
-    Tabs,
-    Input,
+    Radio,
+  },
+  styles: {
+    global: {
+      body: {
+        bg: "#f6f6f6",
+      },
+    },
   },
 };

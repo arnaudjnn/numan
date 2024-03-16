@@ -10,7 +10,7 @@ export default {
   },
   sizes: {
     default: {
-      py: 20,
+      py: 16,
     },
   },
   defaultProps: {

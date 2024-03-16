@@ -1,23 +1,23 @@
 export default {
   baseStyle: {
-    borderRadius: "2xl",
+    borderRadius: "xl",
   },
   variants: {
     solid: {
       py: 7,
-      color: "black",
-      bg: "rgb(255 207 0)",
+      color: "white",
+      bg: "black",
       _hover: {
-        bg: "rgb(255 207 0)",
+        bg: "black",
         _disabled: {
-          bg: "rgb(255 207 0)",
+          bg: "black",
         },
       },
       _active: {
-        bg: "rgb(255 207 100)",
+        bg: "black",
       },
       _disabled: {
-        bg: "rgb(255 207 0)",
+        bg: "black",
       },
     },
   },
